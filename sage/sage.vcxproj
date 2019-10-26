@@ -78,18 +78,29 @@
     <IncludePath>/usr/include;../sage;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="base\ByteBuffer.cpp" />
+    <ClCompile Include="config\inifile.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="message_handler\message_handler.cc" />
+    <ClCompile Include="network\p2p_network.cc" />
     <ClCompile Include="network\udp_client.cc" />
     <ClCompile Include="network\udp_server.cc" />
     <ClCompile Include="routing_table\routing_table.cc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="base\ByteBuffer.h" />
     <ClInclude Include="base\global_defines.h" />
+    <ClInclude Include="config\inifile.h" />
+    <ClInclude Include="message_handler\message_handler.h" />
+    <ClInclude Include="network\p2p_network.h" />
     <ClInclude Include="network\udp_client.h" />
     <ClInclude Include="network\udp_server.h" />
     <ClInclude Include="routing_table\node_info.h" />
     <ClInclude Include="routing_table\routing_table.h" />
     <ClInclude Include="routing_table\routing_table_algorithm.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config\config.ini" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>

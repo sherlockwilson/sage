@@ -8,8 +8,7 @@ namespace sage {
 
 class UdpClient : public boost::noncopyable {
 public:
-	UdpClient() 
-		      : sock_(s_ios, boost::asio::ip::udp::endpoint(boost::asio::ip::udp::v4(), 0)) {}
+	UdpClient() : sock_(s_ios, boost::asio::ip::udp::endpoint(boost::asio::ip::udp::v4(), 0)) {}
 	virtual ~UdpClient() = default;
 public:
 	void Start();

@@ -10,7 +10,7 @@ namespace sage {
 
 class RoutingTable {
 public:
-	RoutingTable() {}
+	explicit RoutingTable(std::string const& id):id_(id) {}
 	~RoutingTable() {}
 
 	void UpdateNode(NodeInfo & node_info);
@@ -29,5 +29,7 @@ private:
 	std::vector<NodeInfoPtr>           neighbors_;
 	std::map<std::string, NodeInfoPtr> nodes_;
 };
+
+using RoutingTablePtr = std::shared_ptr<RoutingTable>;
 
 }

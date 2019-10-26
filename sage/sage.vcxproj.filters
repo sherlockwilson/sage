@@ -11,6 +11,18 @@
     <ClCompile Include="network\udp_server.cc">
       <Filter>network</Filter>
     </ClCompile>
+    <ClCompile Include="network\p2p_network.cc">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="config\inifile.cpp">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="message_handler\message_handler.cc">
+      <Filter>message_handler</Filter>
+    </ClCompile>
+    <ClCompile Include="base\ByteBuffer.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="routing_table">
@@ -21,6 +33,12 @@
     </Filter>
     <Filter Include="network">
       <UniqueIdentifier>{b8699d01-693b-46bb-8683-2c689d5c0ffe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{daf6bd50-f76b-437b-b02b-ed05ff73a650}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="message_handler">
+      <UniqueIdentifier>{663658a6-9500-4480-bdcf-11f130f45bdc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -42,5 +60,22 @@
     <ClInclude Include="base\global_defines.h">
       <Filter>base</Filter>
     </ClInclude>
+    <ClInclude Include="network\p2p_network.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="config\inifile.h">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="message_handler\message_handler.h">
+      <Filter>message_handler</Filter>
+    </ClInclude>
+    <ClInclude Include="base\ByteBuffer.h">
+      <Filter>base</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config\config.ini">
+      <Filter>config</Filter>
+    </None>
   </ItemGroup>
 </Project>
