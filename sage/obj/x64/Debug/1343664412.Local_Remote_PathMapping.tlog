@@ -20,6 +20,7 @@ D:\proj\sage\sage\sage\routing_table|/root/projects/sage/routing_table
 @D:\proj\sage\sage\sage\routing_table|@/root/projects/sage/routing_table
 D:\proj\sage\sage\sage\base\ByteBuffer.h|/root/projects/sage/base/ByteBuffer.h
 D:\proj\sage\sage\sage\base\global_defines.h|/root/projects/sage/base/global_defines.h
+D:\proj\sage\sage\sage\base\spin_mutex.h|/root/projects/sage/base/spin_mutex.h
 D:\proj\sage\sage\sage\config\inifile.h|/root/projects/sage/config/inifile.h
 D:\proj\sage\sage\sage\message_handler\message_handler.h|/root/projects/sage/message_handler/message_handler.h
 D:\proj\sage\sage\sage\network\p2p_network.h|/root/projects/sage/network/p2p_network.h

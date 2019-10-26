@@ -90,6 +90,7 @@
   <ItemGroup>
     <ClInclude Include="base\ByteBuffer.h" />
     <ClInclude Include="base\global_defines.h" />
+    <ClInclude Include="base\spin_mutex.h" />
     <ClInclude Include="config\inifile.h" />
     <ClInclude Include="message_handler\message_handler.h" />
     <ClInclude Include="network\p2p_network.h" />
