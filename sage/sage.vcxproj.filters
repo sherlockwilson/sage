@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="routing_table\routing_table.cc">
+      <Filter>routing_table</Filter>
+    </ClCompile>
+    <ClCompile Include="network\udp_client.cc">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network\udp_server.cc">
+      <Filter>network</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="routing_table">
+      <UniqueIdentifier>{31410b23-3486-43fa-83d5-5b3dfd1eea0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{f211d13f-3b48-406b-9fc2-fbb8e7a82933}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network">
+      <UniqueIdentifier>{b8699d01-693b-46bb-8683-2c689d5c0ffe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="routing_table\routing_table.h">
+      <Filter>routing_table</Filter>
+    </ClInclude>
+    <ClInclude Include="routing_table\node_info.h">
+      <Filter>routing_table</Filter>
+    </ClInclude>
+    <ClInclude Include="routing_table\routing_table_algorithm.h">
+      <Filter>routing_table</Filter>
+    </ClInclude>
+    <ClInclude Include="network\udp_client.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\udp_server.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="base\global_defines.h">
+      <Filter>base</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

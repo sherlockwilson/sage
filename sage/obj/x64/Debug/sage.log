@@ -1,0 +1,17 @@
+﻿  Validating sources
+  Copying sources remotely to '192.168.0.102'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  main.cpp
+  udp_client.cc
+  udp_server.cc
+  routing_table.cc
+D:\proj\sage\sage\sage\routing_table\routing_table.cc(29,41): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+D:\proj\sage\sage\sage\routing_table\routing_table.cc(29,41): warning :   for (int32_t i = 0;i < neighbors_.size(); ++i) {
+D:\proj\sage\sage\sage\routing_table\routing_table.cc(29,41): warning :                                          ^
+D:\proj\sage\sage\sage\routing_table\routing_table.cc(47,42): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+D:\proj\sage\sage\sage\routing_table\routing_table.cc(47,42): warning :   for (int32_t i = 0; i < neighbors_.size(); ++i) {
+D:\proj\sage\sage\sage\routing_table\routing_table.cc(47,42): warning :                                           ^
+  Linking objects
+  sage.vcxproj -> D:\proj\sage\sage\sage\bin\x64\Debug\sage.out

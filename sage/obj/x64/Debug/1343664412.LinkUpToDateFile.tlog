@@ -1,0 +1,1 @@
+g++ -o "/root/projects/sage/bin/x64/Debug/sage.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /root/projects/sage/obj/x64/Debug/main.o /root/projects/sage/obj/x64/Debug/udp_client.o /root/projects/sage/obj/x64/Debug/udp_server.o /root/projects/sage/obj/x64/Debug/routing_table.o -lboost_system -lpthread
