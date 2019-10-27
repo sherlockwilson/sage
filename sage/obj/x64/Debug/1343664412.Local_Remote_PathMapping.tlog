@@ -1,6 +1,10 @@
 D:\proj\sage\sage\sage\base\ByteBuffer.cpp|/root/projects/sage/base/ByteBuffer.cpp
 D:\proj\sage\sage\sage\base|/root/projects/sage/base
 @D:\proj\sage\sage\sage\base|@/root/projects/sage/base
+D:\proj\sage\sage\sage\cmd\cmd_parser.cc|/root/projects/sage/cmd/cmd_parser.cc
+D:\proj\sage\sage\sage\cmd|/root/projects/sage/cmd
+@D:\proj\sage\sage\sage\cmd|@/root/projects/sage/cmd
+D:\proj\sage\sage\sage\cmd\Console.cpp|/root/projects/sage/cmd/Console.cpp
 D:\proj\sage\sage\sage\config\inifile.cpp|/root/projects/sage/config/inifile.cpp
 D:\proj\sage\sage\sage\config|/root/projects/sage/config
 @D:\proj\sage\sage\sage\config|@/root/projects/sage/config
@@ -21,6 +25,9 @@ D:\proj\sage\sage\sage\routing_table|/root/projects/sage/routing_table
 D:\proj\sage\sage\sage\base\ByteBuffer.h|/root/projects/sage/base/ByteBuffer.h
 D:\proj\sage\sage\sage\base\global_defines.h|/root/projects/sage/base/global_defines.h
 D:\proj\sage\sage\sage\base\spin_mutex.h|/root/projects/sage/base/spin_mutex.h
+D:\proj\sage\sage\sage\base\thread_pool.h|/root/projects/sage/base/thread_pool.h
+D:\proj\sage\sage\sage\cmd\cmd_parser.h|/root/projects/sage/cmd/cmd_parser.h
+D:\proj\sage\sage\sage\cmd\Console.hpp|/root/projects/sage/cmd/Console.hpp
 D:\proj\sage\sage\sage\config\inifile.h|/root/projects/sage/config/inifile.h
 D:\proj\sage\sage\sage\message_handler\message_handler.h|/root/projects/sage/message_handler/message_handler.h
 D:\proj\sage\sage\sage\network\p2p_network.h|/root/projects/sage/network/p2p_network.h

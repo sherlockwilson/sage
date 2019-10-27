@@ -3,23 +3,22 @@
 #include <memory>
 #include <queue>
 
+#include "boost/noncopyable.hpp"
 #include "base/global_defines.h"
+#include "base/thread_pool.h"
 #include "routing_table/routing_table.h"
 
 namespace sage {
 
-class MessageHandler {
+class MessageHandler : public boost::noncopyable {
 public:
-	static MessageHandler& Instance();
+    explicit MessageHandler(ThreadPoolPtr thread_pool_ptr) :thread_pool_ptr_(std::move(thread_pool_ptr)) {}
+	virtual ~MessageHandler() = default;
 
-	void PushMessage(RoutingMessagePtr message_ptr);
+	void PushMessage(RoutingMessagePtr message_ptr, 
+		             RoutingTablePtr routing_table_ptr);
 
 private:
-	MessageHandler() = default;
-	~MessageHandler() = default;
-
-	void Exec(RoutingMessage const& routing_message, 
-		      RoutingTablePtr routing_table_ptr);
 
 	void HandleMessage(RoutingMessage const& routing_message, 
 		               RoutingTablePtr routing_table_ptr);
@@ -42,8 +41,9 @@ private:
 	void HandleHeartbeatResponse(RoutingMessage const& routing_message, 
 		                         RoutingTablePtr routing_table_ptr);
 
-	std::queue<RoutingMessagePtr> message_queue_;
-	std::mutex                    mutex_;
+	ThreadPoolPtr                 thread_pool_ptr_;
 };
+
+using MessageHandlerPtr = std::unique_ptr<MessageHandler>;
 
 }

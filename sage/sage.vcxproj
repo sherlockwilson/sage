@@ -79,6 +79,8 @@
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="base\ByteBuffer.cpp" />
+    <ClCompile Include="cmd\cmd_parser.cc" />
+    <ClCompile Include="cmd\Console.cpp" />
     <ClCompile Include="config\inifile.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="message_handler\message_handler.cc" />
@@ -91,6 +93,9 @@
     <ClInclude Include="base\ByteBuffer.h" />
     <ClInclude Include="base\global_defines.h" />
     <ClInclude Include="base\spin_mutex.h" />
+    <ClInclude Include="base\thread_pool.h" />
+    <ClInclude Include="cmd\cmd_parser.h" />
+    <ClInclude Include="cmd\Console.hpp" />
     <ClInclude Include="config\inifile.h" />
     <ClInclude Include="message_handler\message_handler.h" />
     <ClInclude Include="network\p2p_network.h" />
@@ -105,7 +110,7 @@
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>
-      <LibraryDependencies>boost_system;pthread;%(LibraryDependencies)</LibraryDependencies>
+      <LibraryDependencies>boost_system;pthread;readline;%(LibraryDependencies)</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

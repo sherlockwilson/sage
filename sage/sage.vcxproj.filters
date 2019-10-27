@@ -23,6 +23,12 @@
     <ClCompile Include="base\ByteBuffer.cpp">
       <Filter>base</Filter>
     </ClCompile>
+    <ClCompile Include="cmd\Console.cpp">
+      <Filter>cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="cmd\cmd_parser.cc">
+      <Filter>cmd</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="routing_table">
@@ -39,6 +45,9 @@
     </Filter>
     <Filter Include="message_handler">
       <UniqueIdentifier>{663658a6-9500-4480-bdcf-11f130f45bdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmd">
+      <UniqueIdentifier>{a27bf242-e94b-4a7b-a8e3-ffaa52ff5e6c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +83,15 @@
     </ClInclude>
     <ClInclude Include="base\spin_mutex.h">
       <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\thread_pool.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="cmd\Console.hpp">
+      <Filter>cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="cmd\cmd_parser.h">
+      <Filter>cmd</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

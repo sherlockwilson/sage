@@ -2,21 +2,11 @@
 
 namespace sage {
 
-MessageHandler& MessageHandler::Instance() {
-	static MessageHandler ins;
-	return ins;
+void MessageHandler::PushMessage(RoutingMessagePtr message_ptr, 
+	                             RoutingTablePtr routing_table_ptr) {
+	thread_pool_ptr_->enqueue(&MessageHandler::HandleMessage, 
+		                      this, *message_ptr, routing_table_ptr);
 }
-
-void MessageHandler::PushMessage(RoutingMessagePtr message_ptr) {
-	std::lock_guard<std::mutex> lock(mutex_);
-	message_queue_.push(std::move(message_ptr));
-}
-
-void MessageHandler::Exec(RoutingMessage const& routing_message,
-	                      RoutingTablePtr routing_table_ptr) {
-	return HandleMessage(routing_message, routing_table_ptr);
-}
-
 void MessageHandler::HandleMessage(RoutingMessage const& routing_message, 
 	                               RoutingTablePtr routing_table_ptr) {
 	switch ((RoutingMessageType)routing_message.msg_type) {
@@ -24,19 +14,19 @@ void MessageHandler::HandleMessage(RoutingMessage const& routing_message,
 		HandleBootstrapRequest(routing_message, routing_table_ptr);
 		break;
 	case RoutingMessageType::kBootStrapResponse:
-		HandleBootstrapRequest(routing_message, routing_table_ptr);
+		HandleBootstrapResponse(routing_message, routing_table_ptr);
 		break;
     case RoutingMessageType::kNodeJoinRequest:
-		HandleBootstrapRequest(routing_message, routing_table_ptr);
+		HandleNodeJoinRequest(routing_message, routing_table_ptr);
 		break;
 	case RoutingMessageType::kNodeJoinResponse:
-		HandleBootstrapRequest(routing_message, routing_table_ptr);
+		HandleNodeJoinResponse(routing_message, routing_table_ptr);
 		break;
 	case RoutingMessageType::kHeartBeatRequest:
-		HandleBootstrapRequest(routing_message, routing_table_ptr);
+		HandleHeartbeatRequest(routing_message, routing_table_ptr);
 		break;
 	case RoutingMessageType::kHeartBeatResponse:
-		HandleBootstrapRequest(routing_message, routing_table_ptr);
+		HandleHeartbeatResponse(routing_message, routing_table_ptr);
 		break;
 	default:
 		assert(0);

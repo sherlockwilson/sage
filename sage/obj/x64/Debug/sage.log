@@ -3,6 +3,6 @@
   Validating architecture
   Starting remote build
   Compiling sources:
-  message_handler.cc
+  main.cpp
   Linking objects
   sage.vcxproj -> D:\proj\sage\sage\sage\bin\x64\Debug\sage.out

@@ -24,9 +24,6 @@ void P2PNetwork::UnInit() {
 	routing_table_ptr_.reset();
 }
 
-void P2PNetwork::SendRecurve(std::string const& target_id) {
-}
-
 void P2PNetwork::Bootstrap() {
 }
 
@@ -34,6 +31,13 @@ void P2PNetwork::NodeJoin() {
 }
 
 void P2PNetwork::Heartbeat() {
+}
+
+void P2PNetwork::SendRecurve(std::string const& target_id) {
+}
+
+std::vector<std::string> P2PNetwork::GetAllNodes() const {
+	return {};
 }
 
 }
