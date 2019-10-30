@@ -11,10 +11,10 @@
 
 namespace sage {
 
-class P2PNetwork : public boost::noncopyable {
+class P2PNetwork : public boost::noncopyable, public std::enable_shared_from_this<P2PNetwork> {
 public:
 	explicit P2PNetwork(ThreadPoolPtr thread_pool_ptr) {
-		message_handler_ptr_.reset(new MessageHandler(std::move(thread_pool_ptr)));
+		message_handler_ptr_.reset(new MessageHandler(std::move(thread_pool_ptr), shared_from_this()));
 	}
 	virtual ~P2PNetwork() = default;
 
