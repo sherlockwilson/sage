@@ -23,12 +23,6 @@ private:
 	void HandleMessage(RoutingMessage const& routing_message, 
 		               RoutingTablePtr routing_table_ptr);
 
-	void HandleBootstrapRequest(RoutingMessage const& routing_message, 
-		                        RoutingTablePtr routing_table_ptr);
-
-	void HandleBootstrapResponse(RoutingMessage const& routing_message, 
-		                         RoutingTablePtr routing_table_ptr);
-
 	void HandleNodeJoinRequest(RoutingMessage const& routing_message, 
 		                       RoutingTablePtr routing_table_ptr);
 

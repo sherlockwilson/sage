@@ -101,6 +101,7 @@ class IniFile
     int GetStringValue(const string &section, const string &key, string *value);
     /* 获取section段第一个键为key的int值，成功返回0，否则返回错误码 */
     int GetIntValue(const string &section, const string &key, int *value);
+	int GetIntValue(const string &section, const string &key, uint16_t *value);
     /* 获取section段第一个键为key的double值，成功返回0，否则返回错误码 */
     int GetDoubleValue(const string &section, const string &key, double *value);
     /* 获取section段第一个键为key的bool值，成功返回0，否则返回错误码 */

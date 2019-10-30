@@ -10,12 +10,6 @@ void MessageHandler::PushMessage(RoutingMessagePtr message_ptr,
 void MessageHandler::HandleMessage(RoutingMessage const& routing_message, 
 	                               RoutingTablePtr routing_table_ptr) {
 	switch ((RoutingMessageType)routing_message.msg_type) {
-	case RoutingMessageType::kBootStrapRequest:
-		HandleBootstrapRequest(routing_message, routing_table_ptr);
-		break;
-	case RoutingMessageType::kBootStrapResponse:
-		HandleBootstrapResponse(routing_message, routing_table_ptr);
-		break;
     case RoutingMessageType::kNodeJoinRequest:
 		HandleNodeJoinRequest(routing_message, routing_table_ptr);
 		break;
@@ -32,16 +26,6 @@ void MessageHandler::HandleMessage(RoutingMessage const& routing_message,
 		assert(0);
 		break;
 	}
-}
-
-void MessageHandler::HandleBootstrapRequest(RoutingMessage const& routing_message, 
-	                                        RoutingTablePtr routing_table_ptr) {
-
-}
-
-void MessageHandler::HandleBootstrapResponse(RoutingMessage const& routing_message, 
-	                                         RoutingTablePtr routing_table_ptr) {
-
 }
 
 void MessageHandler::HandleNodeJoinRequest(RoutingMessage const& routing_message, 

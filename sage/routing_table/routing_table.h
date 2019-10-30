@@ -4,11 +4,12 @@
 #include <vector>
 #include <mutex>
 
-#include "node_info.h"
+#include "routing_table/node_info.h"
+#include "boost/noncopyable.hpp"
 
 namespace sage {
 
-class RoutingTable {
+class RoutingTable : public boost::noncopyable {
 public:
 	explicit RoutingTable(std::string const& id):id_(id) {}
 	~RoutingTable() {}
@@ -16,6 +17,11 @@ public:
 	void UpdateNode(NodeInfo & node_info);
 
 	void RemoveNode(std::string const& id);
+
+	NodeInfoPtr FindNode(std::string const& node_id);
+
+	auto GetClosestNodes(std::string const& target_id, 
+		                 uint32_t num) -> std::vector<std::string>;
 
 private:
 

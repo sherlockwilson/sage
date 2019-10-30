@@ -5,6 +5,7 @@
 #include "base/thread_pool.h"
 #include "network/udp_client.h"
 #include "network/udp_server.h"
+#include "network/msg_id_generator.h"
 #include "routing_table/routing_table.h"
 #include "message_handler/message_handler.h"
 
@@ -23,11 +24,14 @@ public:
 
 	void Bootstrap();
 
-	void NodeJoin();
+	void NodeJoin(std::string const& ip, int32_t const& port);
 
-	void Heartbeat();
+	void Heartbeat(std::string const& ip,int32_t const& port);
 
-	void SendRecurve(std::string const& target_id);
+	void SendTo(RoutingMessage & message);
+
+	void SendRecurve(RoutingMessage & message, 
+		             std::string const& target_id);
 
 	//for test
 	std::string ID() const { return id_; }
@@ -36,6 +40,8 @@ public:
 private:
 
 	std::string       id_;
+	uint16_t          worker_id_;
+	uint16_t          data_center_id_;
 	std::string       root_ip_;
 	int32_t           root_port_;
 	std::string       local_ip_;
@@ -44,6 +50,7 @@ private:
 	UdpServerPtr      server_ptr_;
 	RoutingTablePtr   routing_table_ptr_;
 	MessageHandlerPtr message_handler_ptr_;
+	MessageIDGeneratorPtr msg_id_generator_;	
 };
 
 using P2PNetworkPtr = std::shared_ptr<P2PNetwork>;

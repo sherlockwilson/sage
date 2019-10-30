@@ -8,12 +8,10 @@ namespace sage {
 using TransportMessageHandler = std::function<std::string(std::string const&, boost::asio::ip::udp::endpoint const&)>;
 
 enum class RoutingMessageType {
-	kBootStrapRequest  = 0,
-	kBootStrapResponse = 1,
-	kNodeJoinRequest   = 2,
-	kNodeJoinResponse  = 3,
-	kHeartBeatRequest  = 4,
-	kHeartBeatResponse = 5,
+	kNodeJoinRequest   = 0,
+	kNodeJoinResponse  = 1,
+	kHeartBeatRequest  = 2,
+	kHeartBeatResponse = 3,
 };
 
 struct RoutingMessage {

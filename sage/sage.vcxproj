@@ -79,6 +79,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="base\ByteBuffer.cpp" />
+    <ClCompile Include="base\id.cc" />
     <ClCompile Include="cmd\cmd_parser.cc" />
     <ClCompile Include="cmd\Console.cpp" />
     <ClCompile Include="config\inifile.cpp" />
@@ -92,12 +93,14 @@
   <ItemGroup>
     <ClInclude Include="base\ByteBuffer.h" />
     <ClInclude Include="base\global_defines.h" />
+    <ClInclude Include="base\id.h" />
     <ClInclude Include="base\spin_mutex.h" />
     <ClInclude Include="base\thread_pool.h" />
     <ClInclude Include="cmd\cmd_parser.h" />
     <ClInclude Include="cmd\Console.hpp" />
     <ClInclude Include="config\inifile.h" />
     <ClInclude Include="message_handler\message_handler.h" />
+    <ClInclude Include="network\msg_id_generator.h" />
     <ClInclude Include="network\p2p_network.h" />
     <ClInclude Include="network\udp_client.h" />
     <ClInclude Include="network\udp_server.h" />

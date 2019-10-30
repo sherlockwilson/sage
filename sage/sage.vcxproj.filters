@@ -29,6 +29,9 @@
     <ClCompile Include="cmd\cmd_parser.cc">
       <Filter>cmd</Filter>
     </ClCompile>
+    <ClCompile Include="base\id.cc">
+      <Filter>base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="routing_table">
@@ -92,6 +95,12 @@
     </ClInclude>
     <ClInclude Include="cmd\cmd_parser.h">
       <Filter>cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="base\id.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="network\msg_id_generator.h">
+      <Filter>network</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -286,6 +286,18 @@ int IniFile::GetIntValue(const string &section, const string &key, int *intValue
     return err;
 }
 
+int IniFile::GetIntValue(const string &section, const string &key, uint16_t *intValue)
+{
+	int err;
+	string strValue;
+
+	err = getValue(section, key, &strValue);
+
+	*intValue = atoi(strValue.c_str());
+
+	return err;
+}
+
 int IniFile::GetDoubleValue(const string &section, const string &key, double *value)
 {
     int err;
